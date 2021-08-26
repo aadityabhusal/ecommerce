@@ -1,0 +1,20 @@
+[
+  {
+    "id": "123",
+    "userId": "001",
+    "title": "Product One",
+    "description": "This is Product One"
+  },
+  {
+    "id": "456",
+    "userId": "001",
+    "title": "Product Two",
+    "description": "This is Product Two"
+  },
+  {
+    "id": "789",
+    "userId": "001",
+    "title": "Product Three",
+    "description": "This is Product Three"
+  }
+]
