@@ -1,7 +1,7 @@
 import Head from "next/head";
 import NextLink from "next/link";
 import NextImage from "next/image";
-import { Link, StyledButton } from "@components/ui/index";
+import { Link, StyledButton, Toggle } from "@components/ui";
 
 export default function Home() {
   return (

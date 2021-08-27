@@ -1,19 +1,43 @@
 import { createGlobalStyle } from "styled-components";
 
+export const defaultTheme = {
+  fontSizes: {},
+  spacings: {},
+  lineHeights: {},
+};
+
 export const theme = {
-  background: {
-    primary: "#3498db",
-    secondary: "#bdc3c7",
+  light: {
+    background: {
+      primary: "#3498db",
+      secondary: "#bdc3c7",
+    },
+    colors: {
+      primary: "#eee",
+      secondary: "#2c3e50",
+    },
+    media: {
+      custom: customMediaQuery,
+      desktop: customMediaQuery(922),
+      tablet: customMediaQuery(768),
+      phone: customMediaQuery(576),
+    },
   },
-  colors: {
-    primary: "#eee",
-    secondary: "#2c3e50",
-  },
-  media: {
-    custom: customMediaQuery,
-    desktop: customMediaQuery(922),
-    tablet: customMediaQuery(768),
-    phone: customMediaQuery(576),
+  dark: {
+    background: {
+      primary: "red",
+      secondary: "#707274",
+    },
+    colors: {
+      primary: "#8a8a8a",
+      secondary: "#5e82a5",
+    },
+    media: {
+      custom: customMediaQuery,
+      desktop: customMediaQuery(922),
+      tablet: customMediaQuery(768),
+      phone: customMediaQuery(576),
+    },
   },
 };
 

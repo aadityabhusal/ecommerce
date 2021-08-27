@@ -1,17 +1,17 @@
+import Header from "@components/common";
+import { ThemeContextProvider } from "@contexts/ThemeContext";
 import { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle, theme } from "../theme";
 
 const client = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
+      <ThemeContextProvider>
+        <Header />
         <Component {...pageProps} />
-      </ThemeProvider>
+      </ThemeContextProvider>
     </QueryClientProvider>
   );
 }

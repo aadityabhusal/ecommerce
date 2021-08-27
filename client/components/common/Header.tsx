@@ -1,5 +1,10 @@
 import styled from "styled-components";
+import { Toggle } from "@components/ui";
 
 export default function Header() {
-  return <header></header>;
+  return (
+    <header>
+      <Toggle />
+    </header>
+  );
 }
