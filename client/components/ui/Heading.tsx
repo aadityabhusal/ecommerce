@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Heading = styled.h1`
   color: #ff5858;
-  font-size: 5rem;
+  font-size: ${({ theme }) => theme.fontSizes.heading1};
 `;
 
 /* 

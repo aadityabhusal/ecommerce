@@ -1,10 +1,21 @@
 import styled from "styled-components";
-import { Toggle } from "@components/ui";
+import { Logo, Search, Menu } from "@components/ui";
 
-export default function Header() {
+const HeaderSection = styled.header``;
+
+const HeaderContent = styled.div`
+  display: flex;
+  padding: 1rem 3rem;
+`;
+
+export function Header() {
   return (
-    <header>
-      <Toggle />
-    </header>
+    <HeaderSection>
+      <HeaderContent>
+        <Logo />
+        <Search />
+        <Menu />
+      </HeaderContent>
+    </HeaderSection>
   );
 }

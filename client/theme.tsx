@@ -1,7 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 export const defaultTheme = {
-  fontSizes: {},
+  fontSizes: {
+    heading1: "3rem",
+    input: {
+      large: "1.75rem",
+    },
+    menuItem: "1.4rem",
+  },
   spacings: {},
   lineHeights: {},
 };
@@ -11,10 +17,17 @@ export const theme = {
     background: {
       primary: "#3498db",
       secondary: "#bdc3c7",
+      highlight: "#ededf0",
     },
     colors: {
       primary: "#eee",
-      secondary: "#2c3e50",
+      secondary: "#686869",
+      darkHighlight: "#2f2f30",
+      shadow: "#D8D4D5",
+      border: "#bdc3c7",
+    },
+    icons: {
+      size1: "1rem",
     },
     media: {
       custom: customMediaQuery,
@@ -22,6 +35,7 @@ export const theme = {
       tablet: customMediaQuery(768),
       phone: customMediaQuery(576),
     },
+    ...defaultTheme,
   },
   dark: {
     background: {
@@ -38,6 +52,7 @@ export const theme = {
       tablet: customMediaQuery(768),
       phone: customMediaQuery(576),
     },
+    ...defaultTheme,
   },
 };
 
@@ -47,7 +62,7 @@ function customMediaQuery(maxWidth: number) {
 
 export const GlobalStyle = createGlobalStyle`
   body{
-    width: 980px;
+    width: 100vw;
     margin: 0 auto;
   }
 

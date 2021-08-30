@@ -1,7 +1,14 @@
 import styled from "styled-components";
+import NextLink, { LinkProps } from "next/link";
+import { FC } from "react";
 
-export const Link = styled.a`
-  color: ${({ theme }) => theme.background.primary};
+interface ILinkProps extends LinkProps {
+  inherit?: boolean | null;
+}
+
+export const LinkTag = styled.a<ILinkProps>`
+  color: ${({ theme, inherit }) =>
+    inherit ? "inherit" : theme.background.primary};
   padding: 5px 10px;
   text-decoration: none;
 
@@ -9,3 +16,13 @@ export const Link = styled.a`
     text-decoration: underline;
   }
 `;
+
+export const Link: FC<ILinkProps> = ({ href, children, inherit }) => {
+  return (
+    <NextLink href={href} passHref>
+      <LinkTag href="" inherit={inherit}>
+        {children}
+      </LinkTag>
+    </NextLink>
+  );
+};
