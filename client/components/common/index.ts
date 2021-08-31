@@ -1,4 +1,4 @@
 export { Header } from "./Header";
 export { Navigation } from "./Navigation";
 export { Footer } from "./Footer";
-export { CategoriesDropDown } from "./CategoriesDropDown";
+export { DropDown } from "./DropDown";

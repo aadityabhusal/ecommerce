@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Link, List, MenuItem, MenuItemIcon } from "@components/ui";
 import { ThLarge, User, CaretDown } from "@styled-icons/fa-solid";
-import { CategoriesDropDown } from "@components/common";
-import { useRef, useState } from "react";
+import { DropDown } from "@components/common";
+import { useEffect, useRef, useState } from "react";
 
 const NavigationSection = styled.nav`
-  box-shadow: 0 5px 4px -3px ${({ theme }) => theme.colors.shadow};
+  box-shadow: 0 8px 6px -4px ${({ theme }) => theme.colors.shadow};
   position: relative;
 `;
 
@@ -42,19 +42,29 @@ const CategoriesIcon = styled(CategoriesMenuItem)`
 export function Navigation() {
   const [dropdown, setDropDown] = useState(false);
   const categoriesDropdown = useRef<HTMLDivElement>(null);
+  const categoriesButton = useRef<HTMLLIElement>(null);
 
-  const handleDropdown = () => {
-    if (categoriesDropdown.current) {
-      categoriesDropdown.current.style.display = dropdown ? "none" : "block";
-      setDropDown(!dropdown);
+  const handleDropdown = (e) => {
+    if (!categoriesDropdown.current?.contains(e.target)) {
+      document.removeEventListener("click", handleDropdown, true);
+      setDropDown(false);
     }
   };
+
+  useEffect(() => {
+    if (dropdown) {
+      document.addEventListener("click", handleDropdown, true);
+    }
+  }, [dropdown]);
 
   return (
     <NavigationSection>
       <NavigationContent>
         <CategoriesMenuList>
-          <CategoriesIcon onClick={handleDropdown}>
+          <CategoriesIcon
+            ref={categoriesButton}
+            onClick={() => setDropDown(true)}
+          >
             <MenuItemIcon>
               <ThLarge size="30" color="inherit" />
             </MenuItemIcon>
@@ -65,7 +75,7 @@ export function Navigation() {
           </CategoriesIcon>
           {/* Loop Starts Here */}
           <CategoriesMenuItem>
-            <Link href="/" inherit>
+            <Link href="/category/men" inherit>
               <MenuItemIcon>
                 <User size="30" color="inherit" />
               </MenuItemIcon>
@@ -73,7 +83,7 @@ export function Navigation() {
             </Link>
           </CategoriesMenuItem>
           <CategoriesMenuItem>
-            <Link href="/" inherit>
+            <Link href="/category/women" inherit>
               <MenuItemIcon>
                 <User size="30" color="inherit" />
               </MenuItemIcon>
@@ -82,7 +92,7 @@ export function Navigation() {
           </CategoriesMenuItem>
         </CategoriesMenuList>
       </NavigationContent>
-      <CategoriesDropDown ref={categoriesDropdown} />
+      {dropdown && <DropDown ref={categoriesDropdown} />}
     </NavigationSection>
   );
 }

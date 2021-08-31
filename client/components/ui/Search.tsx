@@ -19,6 +19,11 @@ const SearchIcon = styled(FaSearch)`
   color: ${({ theme }) => theme.colors.secondary};
 `;
 
+const SearchForm = styled.form`
+  display: flex;
+  flex: 1;
+`;
+
 const SearchInput = styled.input`
   flex: 1;
   outline: none;
@@ -43,14 +48,14 @@ export const Search = () => {
   return (
     <SearchContainer>
       <SearchIcon size="40" />
-      <form onSubmit={handleSearch} method="GET">
+      <SearchForm onSubmit={handleSearch} method="GET">
         <SearchInput
           name="search"
           placeholder="Search for products"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-      </form>
+      </SearchForm>
     </SearchContainer>
   );
 };

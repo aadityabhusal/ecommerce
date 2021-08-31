@@ -15,7 +15,7 @@ export const defaultTheme = {
 export const theme = {
   light: {
     background: {
-      primary: "#3498db",
+      primary: "#fff",
       secondary: "#bdc3c7",
       highlight: "#ededf0",
     },

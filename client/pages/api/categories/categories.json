@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Men"
+  },
+  {
+    "id": "2",
+    "name": "Women"
+  },
+  {
+    "id": "3",
+    "name": "Electronics"
+  },
+  {
+    "id": "4",
+    "name": "Gadgets"
+  },
+  {
+    "id": "5",
+    "name": "Stationery"
+  },
+  {
+    "id": "6",
+    "name": "Musical Instruments"
+  },
+  {
+    "id": "7",
+    "name": "Health & Beauty"
+  },
+  {
+    "id": "8",
+    "name": "Home & Lifestyle"
+  },
+  {
+    "id": "9",
+    "name": "Babies and Toys"
+  },
+  {
+    "id": "10",
+    "name": "Footwear"
+  }
+]
