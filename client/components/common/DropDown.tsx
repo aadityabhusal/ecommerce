@@ -5,6 +5,7 @@ import { ChevronRight } from "@styled-icons/fa-solid";
 
 const DropDownSection = styled.div`
   position: absolute;
+  z-index: 100;
   left: 0;
   width: 100vw;
   height: 15rem;
