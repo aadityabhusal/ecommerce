@@ -7,9 +7,7 @@ interface ILinkProps extends LinkProps {
 }
 
 export const LinkTag = styled.a<ILinkProps>`
-  color: ${({ theme, inherit }) =>
-    inherit ? "inherit" : theme.background.primary};
-  padding: 5px 10px;
+  color: ${({ theme, inherit }) => (inherit ? "inherit" : theme.colors.link)};
   text-decoration: none;
 
   &:hover {

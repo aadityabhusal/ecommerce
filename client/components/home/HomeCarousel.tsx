@@ -11,9 +11,9 @@ import { ChevronLeft, ChevronRight } from "@styled-icons/fa-solid";
 import styled from "styled-components";
 
 const Provider = styled(CarouselProvider)`
-  width: 100vw;
   overflow-x: hidden;
   position: relative;
+  margin-bottom: 1.5rem;
 `;
 
 const CarouselSlider = styled(Slider)`

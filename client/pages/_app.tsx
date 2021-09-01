@@ -1,5 +1,4 @@
-import { Footer, Header, Navigation } from "@components/common";
-import { TopBar } from "@components/common/TopBar";
+import { TopBar, Header, Navigation, Footer } from "@components/common";
 import { ThemeContextProvider } from "@contexts/ThemeContext";
 import { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";

@@ -5,7 +5,8 @@ const HeaderSection = styled.header``;
 
 const HeaderContent = styled.div`
   display: flex;
-  padding: 1rem 3rem;
+  align-items: center;
+  padding: 0.5rem 2rem;
 `;
 
 export function Header() {

@@ -29,7 +29,7 @@ const DropDownMainListItem = styled.li`
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  color: ${({ theme }) => theme.colors.darkHighlight};
+  color: ${({ theme }) => theme.colors.primary};
   &:hover {
     background-color: ${({ theme }) => theme.background.highlight};
   }

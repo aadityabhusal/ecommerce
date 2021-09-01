@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { Link, List } from "@components/ui";
 import { FacebookSquare, Instagram } from "@styled-icons/fa-brands";
 import { LinkTag } from "@components/ui/Link";
+import { Envelope, Phone } from "@styled-icons/fa-solid";
 
 const TopBarSection = styled.header`
   background: ${({ theme }) => theme.background.highlight};
 `;
 
 const TopBarContent = styled.div`
-  padding: 10px;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,15 +17,16 @@ const TopBarContent = styled.div`
 
 const TopBarList = styled(List)`
   align-items: center;
-
   li {
-    margin-right: 10px;
+    font-size: ${({ theme }) => theme.fontSizes.menuItemSmall};
+    margin-right: 0.5rem;
+    padding: 0px 0.5rem;
     color: ${({ theme }) => theme.colors.secondary};
   }
 `;
 
 const SocialMediaIcons = styled.div`
-  color: ${({ theme }) => theme.colors.darkHighlight};
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 export function TopBar() {
@@ -52,8 +54,12 @@ export function TopBar() {
               Wishlist
             </Link>
           </li>
-          <li>gharagan7@gmail.com</li>
-          <li>977-9845476479</li>
+          <li>
+            <Envelope size="15" color="inherit" /> gharagan7@gmail.com
+          </li>
+          <li>
+            <Phone size="15" color="inherit" /> 977-9845476479
+          </li>
         </TopBarList>
         <TopBarList>
           <li>

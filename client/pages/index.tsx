@@ -1,5 +1,6 @@
 import Head from "next/head";
-import { HomeCarousel } from "@components/home";
+import { HomeCarousel, HomeSection } from "@components/home";
+import { PageContainer } from "@components/common";
 
 export default function Home() {
   return (
@@ -9,9 +10,10 @@ export default function Home() {
         <meta name="description" content="Gharagan - Your Doorstep Shopping" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <PageContainer>
         <HomeCarousel />
-      </main>
+        <HomeSection title="Trending Products" />
+      </PageContainer>
     </div>
   );
 }

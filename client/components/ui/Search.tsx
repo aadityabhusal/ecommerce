@@ -6,9 +6,8 @@ import styled from "styled-components";
 const SearchContainer = styled.div`
   display: flex;
   flex: 1;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  margin: 0 5rem;
+  padding: 1rem;
+  margin: 0 3rem;
   border-radius: 2.5rem;
   overflow: hidden;
   background-color: ${({ theme }) => theme.background.highlight};
@@ -29,7 +28,7 @@ const SearchInput = styled.input`
   outline: none;
   border: none;
   font-size: ${({ theme }) => theme.fontSizes.input.large};
-  margin-left: 2rem;
+  margin-left: 1rem;
   background-color: inherit;
 `;
 
@@ -47,7 +46,7 @@ export const Search = () => {
   };
   return (
     <SearchContainer>
-      <SearchIcon size="40" />
+      <SearchIcon size="30" />
       <SearchForm onSubmit={handleSearch} method="GET">
         <SearchInput
           name="search"

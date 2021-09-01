@@ -11,11 +11,12 @@ export const MenuItem = styled.li`
   a {
     display: flex;
     align-items: center;
+    margin-right: 1rem;
     font-size: ${({ theme }) => theme.fontSizes.menuItem};
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.darkHighlight};
+    color: ${({ theme }) => theme.colors.primary};
     div {
       background: ${({ theme }) => theme.background.highlight};
     }
@@ -23,8 +24,8 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuItemIcon = styled.div`
-  margin-right: 10px;
-  padding: 10px;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
   border-radius: 100%;
 `;
 
@@ -34,7 +35,7 @@ export const Menu = () => {
       <MenuItem>
         <Link href="/user/cart" inherit>
           <MenuItemIcon>
-            <ShoppingCart size="30" color="inherit" />
+            <ShoppingCart size="25" color="inherit" />
           </MenuItemIcon>
           <span>Cart</span>
         </Link>
@@ -42,7 +43,7 @@ export const Menu = () => {
       <MenuItem>
         <Link href="/user/wishlist" inherit>
           <MenuItemIcon>
-            <Heart size="30" color="inherit" />
+            <Heart size="25" color="inherit" />
           </MenuItemIcon>
           <span>Wishlist</span>
         </Link>
@@ -50,7 +51,7 @@ export const Menu = () => {
       <MenuItem>
         <Link href="/login" inherit>
           <MenuItemIcon>
-            <User size="30" color="inherit" />
+            <User size="25" color="inherit" />
           </MenuItemIcon>
           <span>Login | Signup</span>
         </Link>
