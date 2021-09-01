@@ -10,7 +10,7 @@ const DropDownSection = styled.div`
   width: 100vw;
   height: 15rem;
   background-color: ${({ theme }) => theme.background.primary};
-  box-shadow: 0 8px 6px -4px ${({ theme }) => theme.colors.shadow};
+  box-shadow: 0 8px 6px -4px ${({ theme }) => theme.color.shadow};
 `;
 
 const DropDownContent = styled.div`
@@ -29,7 +29,7 @@ const DropDownMainListItem = styled.li`
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.color.primary};
   &:hover {
     background-color: ${({ theme }) => theme.background.highlight};
   }

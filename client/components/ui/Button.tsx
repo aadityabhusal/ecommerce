@@ -33,7 +33,7 @@ export const StyledButton = styled.button<StyledProps>`
   background-color: ${({ primary, theme }) =>
     primary ? theme.background.primary : theme.background.secondary};
   color: ${({ primary, theme }) =>
-    primary ? theme.colors.primary : theme.colors.secondary};
+    primary ? theme.color.primary : theme.color.secondary};
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;

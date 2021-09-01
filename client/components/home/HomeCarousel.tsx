@@ -13,7 +13,7 @@ import styled from "styled-components";
 const Provider = styled(CarouselProvider)`
   overflow-x: hidden;
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 `;
 
 const CarouselSlider = styled(Slider)`

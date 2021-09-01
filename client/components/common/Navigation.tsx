@@ -15,10 +15,10 @@ import { DropDown } from "@components/common";
 import { useEffect, useRef, useState } from "react";
 
 const NavigationSection = styled.nav`
-  box-shadow: 0 8px 6px -4px ${({ theme }) => theme.colors.shadow};
+  box-shadow: 0 8px 6px -4px ${({ theme }) => theme.color.shadow};
   position: relative;
   z-index: 99;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 `;
 
 const NavigationContent = styled.div`
@@ -47,7 +47,7 @@ const CategoriesIcon = styled(CategoriesMenuItem)`
   padding-right: 3rem;
   text-align: center;
   cursor: pointer;
-  border-right: 1px solid ${({ theme }) => theme.colors.border};
+  border-right: 1px solid ${({ theme }) => theme.color.border};
   font-size: ${({ theme }) => theme.fontSizes.menuItem};
 `;
 

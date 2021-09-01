@@ -4,6 +4,7 @@ export const defaultTheme = {
   fontSizes: {
     heading1: "3rem",
     sectionTitle: "2rem",
+    subSectionTitle: "1.4rem",
     input: {
       large: "1.4rem",
     },
@@ -25,10 +26,12 @@ export const theme = {
       primary: "#fff",
       secondary: "#bdc3c7",
       highlight: "#ededf0",
+      footer: "#182233",
     },
-    colors: {
+    color: {
       primary: "#2f2f30",
       secondary: "#686869",
+      onDark: "#eee",
       link: "#3498db",
       shadow: "#D8D4D5",
       border: "#bdc3c7",

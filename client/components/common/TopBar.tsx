@@ -21,12 +21,15 @@ const TopBarList = styled(List)`
     font-size: ${({ theme }) => theme.fontSizes.menuItemSmall};
     margin-right: 0.5rem;
     padding: 0px 0.5rem;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.color.secondary};
   }
 `;
 
 const SocialMediaIcons = styled.div`
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.color.primary};
+  a {
+    margin-right: 0.5rem;
+  }
 `;
 
 export function TopBar() {

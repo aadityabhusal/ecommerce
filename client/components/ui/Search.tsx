@@ -15,7 +15,7 @@ const SearchContainer = styled.div`
 
 const SearchIcon = styled(FaSearch)`
   flex: 0 0 3rem;
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.color.secondary};
 `;
 
 const SearchForm = styled.form`

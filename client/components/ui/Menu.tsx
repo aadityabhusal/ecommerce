@@ -7,7 +7,7 @@ const MenuContainer = styled(List)`
 `;
 
 export const MenuItem = styled.li`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.color.secondary};
   a {
     display: flex;
     align-items: center;
@@ -16,7 +16,7 @@ export const MenuItem = styled.li`
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.color.primary};
     div {
       background: ${({ theme }) => theme.background.highlight};
     }

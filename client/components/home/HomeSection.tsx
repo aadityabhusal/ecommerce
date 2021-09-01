@@ -11,14 +11,14 @@ const SectionTitle = styled.h2`
   display: flex;
   align-items: center;
   font-size: ${({ theme }) => theme.fontSizes.sectionTitle};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.color.primary};
   margin: 1rem;
 
   div {
     flex: 1;
     border-radius: 100%;
     margin-left: 10rem;
-    border: 1px solid ${({ theme }) => theme.colors.border};
+    border: 1px solid ${({ theme }) => theme.color.border};
   }
 `;
 const SectionList = styled(List)`

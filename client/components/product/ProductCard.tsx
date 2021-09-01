@@ -12,7 +12,7 @@ const CardContainer = styled.div`
   border-radius: 0.5rem;
 
   &:hover {
-    box-shadow: 0px 6px 10px 0px ${({ theme }) => theme.colors.shadow};
+    box-shadow: 0px 6px 10px 0px ${({ theme }) => theme.color.shadow};
   }
 `;
 const Favourite = styled.div``;
@@ -25,7 +25,7 @@ const ProductInfo = styled.div`
   }
 `;
 const Title = styled.div`
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.color.primary};
   font-size: ${({ theme }) => theme.fontSizes.productCard.title};
   font-weight: bold;
   text-align: left;
@@ -37,17 +37,17 @@ const CardRow = styled.div`
   flex-wrap: wrap;
 `;
 const Category = styled.div`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.color.secondary};
   font-size: ${({ theme }) => theme.fontSizes.productCard.secondary};
 `;
 
 const SalePrice = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.productCard.price};
-  color: ${({ theme }) => theme.colors.price};
+  color: ${({ theme }) => theme.color.price};
 `;
 
 const Price = styled.div`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.color.secondary};
   font-size: ${({ theme }) => theme.fontSizes.productCard.secondary};
   text-decoration: line-through;
   margin-left: 0.5rem;
@@ -55,9 +55,9 @@ const Price = styled.div`
 `;
 
 const SalePercentage = styled.div`
-  background-color: ${({ theme }) => theme.colors.price}20;
+  background-color: ${({ theme }) => theme.color.price}20;
   padding: 0.25rem 0.5rem;
-  color: ${({ theme }) => theme.colors.price};
+  color: ${({ theme }) => theme.color.price};
   font-size: ${({ theme }) => theme.fontSizes.productCard.secondary};
   margin-left: auto;
 `;
