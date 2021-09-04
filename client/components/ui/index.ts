@@ -1,8 +1,11 @@
 export { StyledButton } from "./Button";
 export { Link } from "./Link";
-export { Heading } from "./Heading";
+export { PageTitle, SectionTitle, SubSectionTitle } from "./Title";
 export { Toggle } from "./Toggle";
+export { Input, CheckBox, Select } from "./Input";
 export { List } from "./List";
 export { Logo } from "./Logo";
 export { Search } from "./Search";
+export { BreadCrumb } from "./BreadCrumb";
 export { Menu, MenuItem, MenuItemIcon } from "./Menu";
+export { Section, SectionList } from "./Section";

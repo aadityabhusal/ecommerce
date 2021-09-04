@@ -1,5 +1,5 @@
-import { Heading } from "@components/ui";
+import { PageTitle } from "@components/ui";
 
 export default function Cart() {
-  return <Heading>Cart Page</Heading>;
+  return <PageTitle>Cart Page</PageTitle>;
 }

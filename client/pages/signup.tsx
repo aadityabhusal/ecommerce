@@ -1,5 +1,5 @@
-import { Heading } from "@components/ui";
+import { PageTitle } from "@components/ui";
 
 export default function Signup() {
-  return <Heading>Signup Page</Heading>;
+  return <PageTitle>Signup Page</PageTitle>;
 }

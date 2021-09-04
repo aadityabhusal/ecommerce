@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const UserCard = () => {
+export const BreadCrumb = () => {
   return <div></div>;
 };

@@ -26,7 +26,7 @@ const ProductInfo = styled.div`
 `;
 const Title = styled.div`
   color: ${({ theme }) => theme.color.primary};
-  font-size: ${({ theme }) => theme.fontSizes.productCard.title};
+  font-size: ${({ theme }) => theme.font.title};
   font-weight: bold;
   text-align: left;
 `;
@@ -38,17 +38,17 @@ const CardRow = styled.div`
 `;
 const Category = styled.div`
   color: ${({ theme }) => theme.color.secondary};
-  font-size: ${({ theme }) => theme.fontSizes.productCard.secondary};
+  font-size: ${({ theme }) => theme.font.base};
 `;
 
 const SalePrice = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.productCard.price};
+  font-size: ${({ theme }) => theme.font.subSectionTitle};
   color: ${({ theme }) => theme.color.price};
 `;
 
 const Price = styled.div`
   color: ${({ theme }) => theme.color.secondary};
-  font-size: ${({ theme }) => theme.fontSizes.productCard.secondary};
+  font-size: ${({ theme }) => theme.font.base};
   text-decoration: line-through;
   margin-left: 0.5rem;
   margin-right: auto;
@@ -58,7 +58,7 @@ const SalePercentage = styled.div`
   background-color: ${({ theme }) => theme.color.price}20;
   padding: 0.25rem 0.5rem;
   color: ${({ theme }) => theme.color.price};
-  font-size: ${({ theme }) => theme.fontSizes.productCard.secondary};
+  font-size: ${({ theme }) => theme.font.base};
   margin-left: auto;
 `;
 

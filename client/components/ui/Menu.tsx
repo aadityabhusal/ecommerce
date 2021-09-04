@@ -12,7 +12,7 @@ export const MenuItem = styled.li`
     display: flex;
     align-items: center;
     margin-right: 1rem;
-    font-size: ${({ theme }) => theme.fontSizes.menuItem};
+    font-size: ${({ theme }) => theme.font.menuItem};
   }
 
   a:hover {

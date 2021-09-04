@@ -27,7 +27,7 @@ const SearchInput = styled.input`
   flex: 1;
   outline: none;
   border: none;
-  font-size: ${({ theme }) => theme.fontSizes.input.large};
+  font-size: ${({ theme }) => theme.font.input.large};
   margin-left: 1rem;
   background-color: inherit;
 `;

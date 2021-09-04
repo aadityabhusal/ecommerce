@@ -1,5 +1,5 @@
-import { Heading } from "@components/ui";
+import { PageTitle } from "@components/ui";
 
 export default function Login() {
-  return <Heading>Login Page</Heading>;
+  return <PageTitle>Login Page</PageTitle>;
 }

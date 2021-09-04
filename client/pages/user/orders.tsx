@@ -1,5 +1,5 @@
-import { Heading } from "@components/ui";
+import { PageTitle } from "@components/ui";
 
 export default function Order() {
-  return <Heading>Order Page</Heading>;
+  return <PageTitle>Order Page</PageTitle>;
 }

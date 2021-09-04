@@ -1,23 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 export const defaultTheme = {
-  fontSizes: {
-    heading1: "3rem",
-    sectionTitle: "2rem",
+  font: {
+    base: "1rem",
+    title: "1.2rem",
     subSectionTitle: "1.4rem",
+    sectionTitle: "1.8rem",
+    pageTitle: "2.2rem",
+    menuItem: "1rem",
+    menuSubItem: "0.9rem",
     input: {
       large: "1.4rem",
     },
-    menuItem: "1rem",
-    menuItemSmall: "0.9rem",
-    productCard: {
-      title: "1.2rem",
-      price: "1.4rem",
-      secondary: "1.1rem",
-    },
   },
-  spacings: {},
-  lineHeights: {},
+  spacing: {},
+  lineHeight: {},
 };
 
 export const theme = {

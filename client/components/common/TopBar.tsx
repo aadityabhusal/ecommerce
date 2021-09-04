@@ -18,7 +18,7 @@ const TopBarContent = styled.div`
 const TopBarList = styled(List)`
   align-items: center;
   li {
-    font-size: ${({ theme }) => theme.fontSizes.menuItemSmall};
+    font-size: ${({ theme }) => theme.font.menuSubItem};
     margin-right: 0.5rem;
     padding: 0px 0.5rem;
     color: ${({ theme }) => theme.color.secondary};

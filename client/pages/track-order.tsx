@@ -1,5 +1,5 @@
-import { Heading } from "@components/ui";
+import { PageTitle } from "@components/ui";
 
 export default function TrackOrder() {
-  return <Heading>Track Order Page</Heading>;
+  return <PageTitle>Track Order Page</PageTitle>;
 }

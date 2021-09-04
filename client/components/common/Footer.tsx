@@ -17,7 +17,7 @@ const FooterContent = styled.div`
   justify-content: space-around;
 
   h4 {
-    font-size: ${({ theme }) => theme.fontSizes.subSectionTitle};
+    font-size: ${({ theme }) => theme.font.subSectionTitle};
     margin-bottom: 1.5rem;
   }
 `;
@@ -41,7 +41,7 @@ const FooterMenuList = styled(List)`
   flex-direction: column;
 
   li {
-    font-size: ${({ theme }) => theme.fontSizes.menuItem};
+    font-size: ${({ theme }) => theme.font.menuItem};
     margin-bottom: 0.5rem;
   }
 `;
