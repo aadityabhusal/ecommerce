@@ -1,5 +1,4 @@
 import Head from "next/head";
-import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { IProduct } from "@interfaces/index";
@@ -12,20 +11,17 @@ export default function User({ productData }: { productData: IProduct }) {
       <Head>
         <title>{productData.title} - Gharagan</title>
       </Head>
-      <p>Id: {productData.id}</p>
-      <p>First Name: {productData.title}</p>
-      <p>Last Name: {productData.description}</p>
+      <p>Title: {productData.title}</p>
+      <p>Description: {productData.short_description}</p>
       <p>----------------------------</p>
-      <NextLink href="/user" passHref>
-        <Link>Go to User Page</Link>
-      </NextLink>
+      <Link href="/user">Go to User Page</Link>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const productData = await (
-    await fetch(`http://localhost:3000/api/product/${params.id}`)
+    await fetch(`http://localhost:3000/api/product/${params.slug}`)
   ).json();
 
   return {
@@ -41,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const productIds = products.map((item: IProduct) => ({
     params: {
-      id: item.id,
+      slug: item.slug,
     },
   }));
 

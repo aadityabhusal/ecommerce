@@ -1,42 +1,42 @@
 [
   {
-    "id": "1",
+    "slug": "men",
     "name": "Men"
   },
   {
-    "id": "2",
+    "slug": "women",
     "name": "Women"
   },
   {
-    "id": "3",
+    "slug": "electronics",
     "name": "Electronics"
   },
   {
-    "id": "4",
+    "slug": "gadgets",
     "name": "Gadgets"
   },
   {
-    "id": "5",
+    "slug": "stationery",
     "name": "Stationery"
   },
   {
-    "id": "6",
+    "slug": "musical-instruments",
     "name": "Musical Instruments"
   },
   {
-    "id": "7",
+    "slug": "health-beauty",
     "name": "Health & Beauty"
   },
   {
-    "id": "8",
+    "slug": "home-lifestyle",
     "name": "Home & Lifestyle"
   },
   {
-    "id": "9",
+    "slug": "babies-toys",
     "name": "Babies and Toys"
   },
   {
-    "id": "10",
+    "slug": "footwear",
     "name": "Footwear"
   }
 ]

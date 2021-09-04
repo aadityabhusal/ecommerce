@@ -1,20 +1,29 @@
 [
   {
-    "id": "123",
-    "userId": "001",
+    "slug": "product-one",
     "title": "Product One",
-    "description": "This is Product One"
+    "short_description": "This is Product One",
+    "price": "100",
+    "image": "",
+    "published_date": "",
+    "stock_status": ""
   },
   {
-    "id": "456",
-    "userId": "001",
+    "slug": "product-two",
     "title": "Product Two",
-    "description": "This is Product Two"
+    "short_description": "This is Product Two",
+    "price": "100",
+    "image": "",
+    "published_date": "",
+    "stock_status": ""
   },
   {
-    "id": "789",
-    "userId": "001",
+    "slug": "product-three",
     "title": "Product Three",
-    "description": "This is Product Three"
+    "short_description": "This is Product Three",
+    "price": "100",
+    "image": "",
+    "published_date": "",
+    "stock_status": ""
   }
 ]

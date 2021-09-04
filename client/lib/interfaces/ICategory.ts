@@ -1,4 +1,13 @@
 export interface ICategory {
-  id: string;
+  id?: string;
+  slug: string;
   name: string;
+}
+
+export interface ICategoryDetails {
+  id: string;
+  slug: string;
+  name: string;
+  parentId: string;
+  description: string;
 }

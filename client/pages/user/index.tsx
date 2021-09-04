@@ -12,14 +12,11 @@ export default function User({ userData }: { userData: IUser }) {
       <Head>
         <title>User Page</title>
       </Head>
-      <p>Id: {userData.id}</p>
       <p>First Name: {userData.firstname}</p>
       <p>Last Name: {userData.lastname}</p>
       <p>Email: {userData.email}</p>
       <p>----------------------------</p>
-      <NextLink href="/" passHref>
-        <Link>Go Home</Link>
-      </NextLink>
+      <Link href="/">Go Home</Link>
     </>
   );
 }
