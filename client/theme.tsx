@@ -34,6 +34,7 @@ export const theme = {
       border: "#bdc3c7",
       rating: "#f9c961",
       price: "#27ae60",
+      brand: "#fe696a",
     },
     icons: {
       size1: "1rem",

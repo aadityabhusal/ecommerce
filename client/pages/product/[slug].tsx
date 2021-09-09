@@ -1,25 +1,33 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { IProduct } from "@interfaces/index";
-import { Link } from "@components/ui";
+import { PageTitle, Section } from "@components/ui";
+import { PageContainer } from "@components/common";
+import { ProductGallary, ProductInfo } from "@components/product";
 
-export default function User({ productData }: { productData: IProduct }) {
-  const router = useRouter();
+// import { useRouter } from "next/router";
+// import { GetStaticPaths, GetStaticProps } from "next";
+// import { IProduct } from "@interfaces/index";
+// import { Link } from "@components/ui";
+// Params
+// { productData }: { productData: IProduct }
+// const router = useRouter();
+
+export default function User() {
   return (
     <>
       <Head>
-        <title>{productData.title} - Gharagan</title>
+        <title>Product Name - Gharagan</title>
       </Head>
-      <p>Title: {productData.title}</p>
-      <p>Description: {productData.short_description}</p>
-      <p>----------------------------</p>
-      <Link href="/user">Go to User Page</Link>
+      <PageContainer>
+        <Section flex>
+          <ProductGallary />
+          <ProductInfo />
+        </Section>
+      </PageContainer>
     </>
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+/* export const getStaticProps: GetStaticProps = async ({ params }) => {
   const productData = await (
     await fetch(`http://localhost:3000/api/product/${params.slug}`)
   ).json();
@@ -46,3 +54,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: true,
   };
 };
+ */

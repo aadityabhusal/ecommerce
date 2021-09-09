@@ -8,7 +8,7 @@ const CardContainer = styled.div`
   flex: 0 0 320px;
   text-align: center;
   padding: 0.8rem;
-  margin: 1.5rem 1rem;
+  margin: 1rem;
   border-radius: 0.5rem;
 
   &:hover {

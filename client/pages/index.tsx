@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { HomeCarousel, HomeSection } from "@components/home";
+import { HomeCarousel, HomeSection, HomeSliderSection } from "@components/home";
 import { PageContainer } from "@components/common";
 
 export default function Home() {
@@ -13,6 +13,8 @@ export default function Home() {
       <PageContainer>
         <HomeCarousel />
         <HomeSection title="Trending Products" />
+        <HomeSliderSection title="Featured Products" />
+        <HomeSection title="Best Selling Products" />
       </PageContainer>
     </div>
   );
