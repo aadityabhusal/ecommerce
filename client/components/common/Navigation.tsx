@@ -12,7 +12,7 @@ import {
   Hammer,
 } from "@styled-icons/fa-solid";
 import { DropDown } from "@components/common";
-import { useEffect, useRef, useState } from "react";
+import { MouseEventHandler, useEffect, useRef, useState } from "react";
 
 const NavigationSection = styled.nav`
   box-shadow: 0 8px 6px -4px ${({ theme }) => theme.color.shadow};
@@ -57,7 +57,10 @@ export function Navigation() {
 
   useEffect(() => {
     const handleDropdown = (e: any) => {
-      if (!categoriesDropdown.current?.contains(e.target)) {
+      if (
+        !categoriesDropdown.current?.contains(e.target) &&
+        !categoriesButton.current?.contains(e.target)
+      ) {
         document.removeEventListener("click", handleDropdown, true);
         setDropDown(false);
       }
@@ -74,7 +77,7 @@ export function Navigation() {
         <CategoriesMenuList>
           <CategoriesIcon
             ref={categoriesButton}
-            onClick={() => setDropDown(true)}
+            onClick={(e) => setDropDown(!dropdown)}
           >
             <MenuItemIcon>
               <ThLarge size="25" color="inherit" />

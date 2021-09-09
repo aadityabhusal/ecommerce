@@ -1,11 +1,15 @@
 import Image from "next/image";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import StarRatings from "react-star-ratings";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Link } from "@components/ui";
 
-const CardContainer = styled.div`
-  flex: 0 0 320px;
+interface IProductCard {
+  small?: boolean;
+}
+
+const CardContainer = styled.div<IProductCard>`
+  flex: 0 0 ${({ small }) => (small ? "150px" : "320px")};
   text-align: center;
   padding: 0.8rem;
   margin: 1rem;
@@ -24,11 +28,19 @@ const ProductInfo = styled.div`
     margin-top: 1rem;
   }
 `;
-const Title = styled.div`
+const Title = styled.div<IProductCard>`
   color: ${({ theme }) => theme.color.primary};
   font-size: ${({ theme }) => theme.font.title};
   font-weight: bold;
   text-align: left;
+  ${({ small }) =>
+    small &&
+    css`
+      width: 150px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    `}
 `;
 const CardRow = styled.div`
   display: flex;
@@ -41,17 +53,21 @@ const Category = styled.div`
   font-size: ${({ theme }) => theme.font.base};
 `;
 
-const SalePrice = styled.div`
+const SalePrice = styled.div<IProductCard>`
   font-size: ${({ theme }) => theme.font.subSectionTitle};
   color: ${({ theme }) => theme.color.price};
+
+  ${({ small }) => small && "margin-bottom: 0.5rem;"};
 `;
 
-const Price = styled.div`
+const Price = styled.div<IProductCard>`
   color: ${({ theme }) => theme.color.secondary};
   font-size: ${({ theme }) => theme.font.base};
   text-decoration: line-through;
   margin-left: 0.5rem;
   margin-right: auto;
+
+  ${({ small }) => small && "margin-left: 0;"};
 `;
 
 const SalePercentage = styled.div`
@@ -62,10 +78,10 @@ const SalePercentage = styled.div`
   margin-left: auto;
 `;
 
-export const ProductCard = () => {
+export const ProductCard: FC<IProductCard> = ({ small }) => {
   const [rating, setRating] = useState(0);
   return (
-    <CardContainer>
+    <CardContainer small={small}>
       <Favourite />
       <ImageContainer>
         <Image
@@ -76,30 +92,32 @@ export const ProductCard = () => {
         />
       </ImageContainer>
       <ProductInfo>
-        <CardRow>
-          <Category>
-            <Link href="/category/sunglasses" inherit>
-              Sunglasses
-            </Link>
-          </Category>
-          <StarRatings
-            rating={rating}
-            starRatedColor="#f9c961"
-            changeRating={setRating}
-            numberOfStars={5}
-            name="rating"
-            starDimension="22px"
-            starSpacing="0px"
-          />
-        </CardRow>
-        <Title>
+        {!small && (
+          <CardRow>
+            <Category>
+              <Link href="/category/sunglasses" inherit>
+                Sunglasses
+              </Link>
+            </Category>
+            <StarRatings
+              rating={rating}
+              starRatedColor="#f9c961"
+              changeRating={setRating}
+              numberOfStars={5}
+              name="rating"
+              starDimension="22px"
+              starSpacing="0px"
+            />
+          </CardRow>
+        )}
+        <Title small={small}>
           <Link href="/product/1" inherit>
             Dior Ladies Sunglasses designed for Women
           </Link>
         </Title>
         <CardRow>
-          <SalePrice>Rs. 4,999.00</SalePrice>
-          <Price>Rs 5,999.00</Price>
+          <SalePrice small={small}>Rs. 4,999.00</SalePrice>
+          <Price small={small}>Rs 5,999.00</Price>
           <SalePercentage>-20%</SalePercentage>
         </CardRow>
       </ProductInfo>
