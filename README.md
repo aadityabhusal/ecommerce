@@ -1,2 +1,2 @@
-# gharagan
-Gharagan Ecommerce Site
+# ecommerce
+Simple Next.js Ecommerce Site
